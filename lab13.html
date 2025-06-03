@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Lain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    body {
+      margin: 0;
+      background: #0d0f1a;
+      color: #66ccff;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .splash {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: #66ccff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      z-index: 999;
+      font-family: 'Share Tech Mono', monospace;
+      animation: splashOut 4s forwards ease-in-out;
+    }
+
+    @keyframes splashOut {
+      0% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    .terminal {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 2rem 3rem;
+      border: 1px solid #335577;
+      background-color: rgba(13, 18, 34, 0.8);
+      box-shadow: 0 0 20px rgba(102, 204, 255, 0.15);
+      z-index: 1;
+    }
+
+    .terminal h1 {
+      font-size: 3rem;
+      letter-spacing: 0.15rem;
+      animation: flicker 1.4s infinite alternate;
+    }
+
+    .subtitle {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+
+    .image-container img {
+      width: 220px;
+      border: 2px solid #66ccff;
+      box-shadow: 0 0 15px #223344;
+      filter: grayscale(30%) contrast(120%);
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; text-shadow: 0 0 5px #66ccff; }
+      50% { opacity: 0.6; text-shadow: 0 0 10px #33ccff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash">Present day... Present time...</div>
+
+  <div class="terminal">
+    <div>
+      <h1>Hello, Lain.</h1>
+      <div class="subtitle">LAYER 01 // NETWORK CONNECTED</div>
+    </div>
+    <div class="image-container">
+      <img src="lain.jpg" alt="Lain">
+    </div>
+  </div>
+</body>
+</html>
