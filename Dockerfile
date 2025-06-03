@@ -1,7 +1,4 @@
-# Простий Dockerfile для Node.js
-FROM node:18
-WORKDIR /app
-COPY . .
-RUN npm install
-CMD ["npm", "start"]
-EXPOSE 3000
+# Dockerfile for static HTML
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+EXPOSE 80
